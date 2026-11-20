@@ -1,6 +1,7 @@
 package com.androidbook.kotlinbook
 
 import android.R.attr.text
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -65,27 +66,57 @@ class MainActivity : AppCompatActivity() {
 //                Toast.LENGTH_LONG).show()
 //    }
 
+    //#5
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        enableEdgeToEdge()
+//        setContentView(R.layout.activity_main_3)
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+//            insets
+//        }
+//
+//    }
+//
+//    fun onBookClick(v: View) {
+//        val bookName = when (v.id) {
+//            R.id.buy_1 -> "도서1"
+//            R.id.buy_2 -> "도서2"
+//            R.id.buy_3 -> "도서3"
+//            R.id.buy_4 -> "도서4"
+//            else -> "불명"
+//        }
+//
+//        Toast.makeText(this, bookName, Toast.LENGTH_SHORT).show()
+//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_3)
+        setContentView(R.layout.activity_main_4)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-    }
+        val email = findViewById<EditText>(R.id.editText1)
+        val subject = findViewById<EditText>(R.id.editText2)
+        val context = findViewById<EditText>(R.id.editText3)
 
-    fun onBookClick(v: View) {
-        val bookName = when (v.id) {
-            R.id.buy_1 -> "도서1"
-            R.id.buy_2 -> "도서2"
-            R.id.buy_3 -> "도서3"
-            R.id.buy_4 -> "도서4"
-            else -> "불명"
+        val button : Button = findViewById(R.id.send)
+
+        button.setOnClickListener {
+
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "message/rfc822"
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email.text.toString()))
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject.text.toString())
+            intent.putExtra(Intent.EXTRA_TEXT, context.text.toString())
+            val intentSend = Intent.createChooser(intent, "앱을 선택하시오.")
+            startActivity(intentSend)
         }
-
-        Toast.makeText(this, bookName, Toast.LENGTH_SHORT).show()
     }
+
 }
