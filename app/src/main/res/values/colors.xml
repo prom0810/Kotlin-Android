@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name = "ActionBar">#F7A69A</color>
+    <color name = "statusBar">#F8BEB6</color>
+    <color name = "navigationBar">#F8BEB6</color>
 </resources>

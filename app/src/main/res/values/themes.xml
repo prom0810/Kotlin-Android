@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.KotlinBook" parent="Base.Theme.KotlinBook" />
+    <style name="Theme.KotlinBook.BookScreen" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#48B6B5</item>
+        <item name="colorPrimaryVariant">#48B6B5</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
 </resources>

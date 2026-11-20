@@ -17,12 +17,12 @@
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="message/rfc822"/>
             </intent-filter>
         </activity>
+        <activity android:name=".MenuActivity" android:exported="false" />
+        <activity android:name=".BooksActivity" android:exported="false" android:label="도서목록" android:theme="@style/Theme.KotlinBook.BookScreen" />
+        <activity android:name=".BookActivity" android:exported="false" android:label="도서상세정보" android:theme="@style/Theme.KotlinBook.BookScreen" />
     </application>
 
 </manifest>

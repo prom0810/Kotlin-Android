@@ -68,7 +68,7 @@
                     android:orientation="horizontal">
                     <ImageButton
                         android:id="@+id/buy_1"
-                        android:onClick="onBookClick"
+                        
                         android:layout_width="130dp"
                         android:layout_height="180dp"
                         android:layout_marginEnd="30dp"
@@ -78,10 +78,10 @@
 
                     <ImageButton
                         android:id="@+id/buy_2"
-                        android:onClick="onBookClick"
+                        
                         android:layout_width="130dp"
                         android:layout_height="180dp"
-                        android:layout_marginStart="60dp"
+                        android:layout_marginStart="8dp"
                         android:background="@android:color/transparent"
                         android:scaleType="fitCenter"
                         android:src="@drawable/books_book2" />
@@ -99,16 +99,16 @@
                     android:scaleType="fitCenter"
                     android:textSize="5pt"
                     android:textAlignment="center"
-                    android:text="정가 : 22.000" />
+                    android:text="정가 : 32,000" />
 
                 <TextView
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="87dp"
+                    android:layout_marginStart="16dp"
                     android:scaleType="fitCenter"
                     android:textSize="5pt"
                     android:textAlignment="center"
-                    android:text="정가 : 34.000" />
+                    android:text="정가 : 25,000" />
             </LinearLayout>
             </TableRow>
             <TableRow
@@ -121,7 +121,7 @@
                     android:orientation="horizontal">
                     <ImageButton
                         android:id="@+id/buy_3"
-                        android:onClick="onBookClick"
+                        
                         android:layout_width="130dp"
                         android:layout_height="180dp"
                         android:layout_marginEnd="30dp"
@@ -131,10 +131,10 @@
 
                     <ImageButton
                         android:id="@+id/buy_4"
-                        android:onClick="onBookClick"
+                        
                         android:layout_width="130dp"
                         android:layout_height="180dp"
-                        android:layout_marginStart="60dp"
+                        android:layout_marginStart="8dp"
                         android:src="@drawable/books_book4"
                         android:scaleType="fitCenter"
                         android:background="@android:color/transparent"/>
@@ -152,16 +152,16 @@
                         android:scaleType="fitCenter"
                         android:textSize="5pt"
                         android:textAlignment="center"
-                        android:text="정가 : 30.000" />
+                        android:text="정가 : 29,000" />
 
                     <TextView
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="87dp"
+                        android:layout_marginStart="16dp"
                         android:scaleType="fitCenter"
                         android:textSize="5pt"
                         android:textAlignment="center"
-                        android:text="정가 28.000"/>
+                        android:text="정가 31,000"/>
                 </LinearLayout>
             </TableRow>
         </TableLayout>

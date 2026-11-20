@@ -44,7 +44,6 @@
         android:layout_marginTop="350dp"
 
         android:background="@android:color/transparent"
-        android:onClick="onBookClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
